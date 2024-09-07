@@ -63,31 +63,7 @@
         function getDaysInMonth(year, month) {
             return new Date(year,month,0).getDate();
 
-        }   
-        document.getElementById('calculator').addEventListener('click',function(event){
-            event.preventDefault();
-
-            let date = new Date();
-            let day = date.getDate(); 
-            let month = (date.getMonth() + 1); 
-            let year = date.getFullYear();
-            
-             day = day < 10 ? `0${day}` : `${day}`;
-            month = month < 10 ? `0${month}` : `${month}`;
-
-            let formattedDate = `${year}-${month}-${day}`;
-
-            let dateDiv = document.getElementById('date');
-            dateDiv.innerHTML = '';
-
-            if(formattedDate){
-                dateDiv.value = formattedDate;
-            }else{
-                dateDiv.value = '';
-            }
-
-        });
-
+        }      
     </script>
 </body>
 </html>
